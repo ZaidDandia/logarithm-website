@@ -2,7 +2,7 @@
   "name": "logarithm",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ZaidDandia.github.io/website",
+  "homepage": "http://zaiddandia.github.io",
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.42",
     "@testing-library/jest-dom": "^5.17.0",
@@ -28,7 +28,7 @@
   },
   "config": {
     "gh-pages": {
-      "timeout": 600000 
+      "timeout": 600000
     }
   },
   "eslintConfig": {

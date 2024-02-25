@@ -1,0 +1,110 @@
+$color-bg: #000000;
+$color-text: #FFFFFF;
+$color-dark-1: #414141;
+$color-dark-2: #1f1f1f;
+$color-dark-3: #111111;
+
+$color-primary: #e75a13;
+$color-primary-fade: #b8450c;
+
+$section-padding: 10rem 0;
+$nav-btn-h: 2.5px;
+$nav-btn-w: 2.2rem;
+
+@font-face {
+  font-family: Akira;
+  src: url("../fonts/Akira\ Expanded\ Demo.otf");
+}
+
+@font-face {
+  font-family: Mona-sans;
+  src: url('../fonts/Mona\ Sans/WOFF\ 2/Mona-Sans-MediumWide.woff2') format('woff2');
+  /* Add other font properties if needed, like font-weight, font-style */
+}
+
+
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (max-width: 112.5em) {
+      @content;
+    } //1800
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Mona-sans, sans-serif;
+  font-size: 1.6rem;
+  color: $color-text;
+  background-color: $color-bg;
+  height: 1800px;
+
+  @include respond(phone) {
+    font-size: 1.8rem;
+  }
+}
+
+.wrapper {
+  position: relative;
+
+  &__content {
+    position: absolute;
+    top: 0;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.5em;
+
+  &-track {
+    background: $color-dark-1;
+    border-radius: 15px;
+    margin-block: 0.5em;
+  }
+
+  &-thumb {
+    background: $color-primary-fade;
+    border-radius: 15px;
+
+    &:hover {
+      background: $color-primary;
+      border-radius: 15px;
+    }
+  }
+}
+
+@supports (scrollbar-color: red blue) {
+  * {
+    scrollbar-color: $color-primary-fade $color-dark-1;
+    scrollbar-width: thin;
+  }
+}

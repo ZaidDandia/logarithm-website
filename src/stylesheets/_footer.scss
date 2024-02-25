@@ -1,0 +1,30 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+    background-image: linear-gradient(to bottom, $color-dark-3 45%, $color-bg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &__head {
+        height: 10rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        // background-color: aliceblue;
+    }
+
+    &__heading {
+        font-family: Akira, sans-serif;
+        font-size: 8rem;
+        text-align: center;
+
+        @include respond(tab-land) {
+            font-size: 6rem;
+        }
+
+        @include respond(tab-port) {
+            font-size: 4.5rem;
+        }
+    }
+}

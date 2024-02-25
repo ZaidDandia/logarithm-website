@@ -2,7 +2,7 @@
   "name": "logarithm",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://zaiddandia.github.io/logarithm-website/",
+  "homepage": "https://www.logarithmtech.com",
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.42",
     "@testing-library/jest-dom": "^5.17.0",

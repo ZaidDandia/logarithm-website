@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunklogarithm=self.webpackChunklogarithm||[]).push([[1787],{1787:(e,o,i)=>{i.d(o,{bounce:()=>n});var l=i(4864);const c=e=>{void 0===e.collisionMaxSpeed&&(e.collisionMaxSpeed=(0,l.qS)(e.options.collisions.maxSpeed)),e.velocity.length>e.collisionMaxSpeed&&(e.velocity.length=e.collisionMaxSpeed)};function n(e,o){(0,l.ee)((0,l.ch)(e),(0,l.ch)(o)),c(e),c(o)}}}]);
-//# sourceMappingURL=1787.a5d90652.chunk.js.map

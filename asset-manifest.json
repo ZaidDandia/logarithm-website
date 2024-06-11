@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.2a8f8b17.css",
-    "main.js": "/static/js/main.0a5a71a5.js",
+    "main.js": "/static/js/main.0591d206.js",
     "static/js/592.dc330327.chunk.js": "/static/js/592.dc330327.chunk.js",
     "static/media/looped-video.gif": "/static/media/looped-video.d32e096a775d540f2b2b.gif",
     "static/media/Vitpay.png": "/static/media/Vitpay.32e0225cb6ecc59be883.png",
@@ -12,11 +12,11 @@
     "static/media/Mona-Sans-MediumWide.woff2": "/static/media/Mona-Sans-MediumWide.5d54c6d8789c1cfa5201.woff2",
     "index.html": "/index.html",
     "main.2a8f8b17.css.map": "/static/css/main.2a8f8b17.css.map",
-    "main.0a5a71a5.js.map": "/static/js/main.0a5a71a5.js.map",
+    "main.0591d206.js.map": "/static/js/main.0591d206.js.map",
     "592.dc330327.chunk.js.map": "/static/js/592.dc330327.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2a8f8b17.css",
-    "static/js/main.0a5a71a5.js"
+    "static/js/main.0591d206.js"
   ]
 }

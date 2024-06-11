@@ -1,5 +1,5 @@
 $color-bg: #000000;
-$color-text: #FFFFFF;
+$color-text: #ffffff;
 $color-dark-1: #414141;
 $color-dark-2: #1f1f1f;
 $color-dark-3: #111111;
@@ -18,11 +18,10 @@ $nav-btn-w: 2.2rem;
 
 @font-face {
   font-family: Mona-sans;
-  src: url('../fonts/Mona\ Sans/WOFF\ 2/Mona-Sans-MediumWide.woff2') format('woff2');
+  src: url("../fonts/Mona\ Sans/WOFF\ 2/Mona-Sans-MediumWide.woff2")
+    format("woff2");
   /* Add other font properties if needed, like font-weight, font-style */
 }
-
-
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
@@ -52,7 +51,6 @@ $nav-btn-w: 2.2rem;
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
 }
 
 html {
@@ -66,7 +64,7 @@ body {
   font-size: 1.6rem;
   color: $color-text;
   background-color: $color-bg;
-  height: 1800px;
+  // height: 1800px;
 
   @include respond(phone) {
     font-size: 1.8rem;

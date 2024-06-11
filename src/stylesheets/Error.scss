@@ -1,0 +1,21 @@
+@import "reset.scss";
+
+.section__error {
+  height: 40vh;
+  padding: 20rem;
+}
+
+.error {
+  &__head {
+    font-family: Akira, "sans-serif";
+    font-size: 10rem;
+    font-weight: 200;
+    color: $color-primary;
+    margin-bottom: 3rem;
+  }
+
+  &__detail {
+    font-size: 4rem;
+    color: #ffffff70;
+  }
+}

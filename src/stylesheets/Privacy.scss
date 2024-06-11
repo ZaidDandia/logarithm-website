@@ -1,0 +1,81 @@
+@import "reset.scss";
+
+.section__privacy {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 15rem 0;
+
+  @include respond(tab-port) {
+  }
+
+  &--layout {
+    max-width: 1100px;
+
+    @include respond(tab-land) {
+      margin: 0 6rem;
+    }
+  }
+
+  &--head {
+    font-family: Akira, sans-serif;
+    text-align: center;
+    font-size: 6rem;
+    text-transform: uppercase;
+
+    @include respond(tab-port) {
+      font-size: 4rem;
+    }
+  }
+}
+
+.privacy {
+  &__content {
+    margin-top: 4rem;
+
+    &--head {
+      font-size: 3rem;
+      color: $color-primary;
+      margin: 1rem 0;
+
+      @include respond(tab-port) {
+        font-size: 2.5rem;
+      }
+    }
+
+    &--subheading {
+      margin: 3rem 0;
+      font-size: 2.5rem;
+
+      @include respond(tab-port) {
+        font-size: 2rem;
+      }
+    }
+
+    &--details {
+      line-height: 1.5;
+      font-size: 2rem;
+
+      @include respond(tab-port) {
+        font-size: 1.5rem;
+      }
+    }
+
+    &--list {
+      margin: 3rem 0;
+      list-style: none;
+
+      & li {
+        &::before {
+          font-size: 3rem;
+          content: "• ";
+          margin-right: 5px;
+
+          @include respond(tab-port) {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

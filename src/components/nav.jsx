@@ -72,15 +72,6 @@ function Nav({ isSmallScreen, isScrolled }) {
       ) : (
         <nav className={`nav ${isScrolled ? "nav__scrolled" : ""}`}>
           <div className="nav__options">
-            <div className="nav__logo">
-              <a className="nav__link" href="/">
-                <img
-                  src={logo}
-                  className="nav__logo--img"
-                  alt="logarithm logo"
-                />
-              </a>
-            </div>
             <ul className="nav__list">
               <li className="nav__item">
                 <a className="nav__link" href="/">
@@ -91,6 +82,17 @@ function Nav({ isSmallScreen, isScrolled }) {
                 <a className="nav__link" href="#services">
                   Services
                 </a>
+              </li>
+              <li className="nav__item">
+                <div className="nav__logo">
+                  <a className="nav__link" href="/">
+                    <img
+                      src={logo}
+                      className="nav__logo--img"
+                      alt="logarithm logo"
+                    />
+                  </a>
+                </div>
               </li>
               <li className="nav__item">
                 <a className="nav__link" href="#projects">

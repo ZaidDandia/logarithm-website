@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import Nav from "./components/nav";
 import Footer from "./components/footer";
@@ -28,7 +28,7 @@ const App = () => {
     const handleScroll = () => {
       const scrollFromTop = window.pageYOffset;
 
-      if (scrollFromTop > 0) setIsScrolled(true);
+      if (scrollFromTop > 100) setIsScrolled(true);
       else setIsScrolled(false);
     };
 
@@ -47,14 +47,18 @@ const App = () => {
   return (
     <div className="wrapper">
       <Nav isSmallScreen={isSmallScreen} isScrolled={isScrolled} />
-      <BrowserRouter>
+      <HashRouter>
         {/* Hello */}
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route
+            exact
+            path="/"
+            element={<Home isSmallScreen={isSmallScreen} />}
+          />
           <Route exact path="/privacy" element={<Privacy />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
       <Footer />
     </div>
   );

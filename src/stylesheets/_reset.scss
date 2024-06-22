@@ -6,21 +6,21 @@ $color-dark-3: #111111;
 
 $color-primary: #e75a13;
 $color-primary-fade: #b8450c;
+$color-primary-fade2: #732e0b;
 
 $section-padding: 10rem 0;
+$section-padding-2: 8rem 0;
 $nav-btn-h: 2.5px;
 $nav-btn-w: 2.2rem;
 
 @font-face {
   font-family: Akira;
-  src: url("../fonts/Akira\ Expanded\ Demo.otf");
+  src: url("../fonts/Gotham\ Black\ Regular.woff");
 }
 
 @font-face {
   font-family: Mona-sans;
-  src: url("../fonts/Mona\ Sans/WOFF\ 2/Mona-Sans-MediumWide.woff2")
-    format("woff2");
-  /* Add other font properties if needed, like font-weight, font-style */
+  src: url("../fonts/Gotham\ Medium.woff") format("woff");
 }
 
 @mixin respond($breakpoint) {

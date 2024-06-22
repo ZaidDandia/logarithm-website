@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.2a8f8b17.css",
-    "main.js": "/static/js/main.83af1d7c.js",
+    "main.css": "/static/css/main.71b256e8.css",
+    "main.js": "/static/js/main.c850f1b7.js",
     "static/js/112.0efe095b.chunk.js": "/static/js/112.0efe095b.chunk.js",
     "static/js/592.dc330327.chunk.js": "/static/js/592.dc330327.chunk.js",
     "static/js/960.18d51065.chunk.js": "/static/js/960.18d51065.chunk.js",
     "static/media/looped-video.gif": "/static/media/looped-video.d32e096a775d540f2b2b.gif",
+    "static/media/Man.png": "/static/media/Man.fe5ecc6291b1404d61fd.png",
     "static/media/Vitpay.png": "/static/media/Vitpay.32e0225cb6ecc59be883.png",
     "static/media/logo": "/static/media/logo.fa3b86152b7aa2f3e45b",
     "static/media/Centro.png": "/static/media/Centro.429c59c1cf92c5602cc8.png",
     "static/media/ThaThrowdown.png": "/static/media/ThaThrowdown.59a0c05251ca6a6b24ce.png",
-    "static/media/Akira Expanded Demo.otf": "/static/media/Akira Expanded Demo.5198553380d9bb727554.otf",
-    "static/media/Mona-Sans-MediumWide.woff2": "/static/media/Mona-Sans-MediumWide.5d54c6d8789c1cfa5201.woff2",
+    "static/media/Gotham Black Regular.woff": "/static/media/Gotham Black Regular.198bfb9dee3d949e3cea.woff",
+    "static/media/Gotham Medium.woff": "/static/media/Gotham Medium.c50041219bad1e0a2cd7.woff",
     "index.html": "/index.html",
-    "main.2a8f8b17.css.map": "/static/css/main.2a8f8b17.css.map",
-    "main.83af1d7c.js.map": "/static/js/main.83af1d7c.js.map",
+    "main.71b256e8.css.map": "/static/css/main.71b256e8.css.map",
+    "main.c850f1b7.js.map": "/static/js/main.c850f1b7.js.map",
     "112.0efe095b.chunk.js.map": "/static/js/112.0efe095b.chunk.js.map",
     "592.dc330327.chunk.js.map": "/static/js/592.dc330327.chunk.js.map",
     "960.18d51065.chunk.js.map": "/static/js/960.18d51065.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a8f8b17.css",
-    "static/js/main.83af1d7c.js"
+    "static/css/main.71b256e8.css",
+    "static/js/main.c850f1b7.js"
   ]
 }

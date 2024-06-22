@@ -1,0 +1,194 @@
+.white {
+  width: 100%;
+  background-color: $color-text;
+  color: #717171;
+  display: flex;
+  justify-content: center;
+  padding: $section-padding-2;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  overflow-y: hidden;
+  height: calc(584px - 16rem);
+
+  @include respond(tab-port) {
+    height: calc(700px - 16rem);
+  }
+
+  &__container {
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    margin: 0 10rem;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      margin: 0 5rem;
+    }
+
+    @include respond(phone) {
+      margin: 0 3rem;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    // mix-blend-mode: screen;
+    z-index: 2;
+    // padding-top: 5rem;
+
+    &--heading {
+      font-family: Akira, sans-serif;
+      font-size: 6rem;
+      color: $color-primary;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      // mix-blend-mode: difference;
+
+      @include respond(big-desktop) {
+        font-size: 5rem;
+      }
+
+      @include respond(tab-land) {
+        font-size: 4rem;
+      }
+
+      @include respond(tab-port) {
+        font-size: 3rem;
+      }
+    }
+
+    &--details {
+      font-size: 3rem;
+
+      @include respond(tab-land) {
+        font-size: 2.5rem;
+      }
+
+      @include respond(tab-port) {
+        font-size: 2rem;
+      }
+    }
+
+    &--btn {
+      font-family: inherit;
+      font-size: 2rem;
+      color: $color-text;
+      align-self: flex-start;
+      margin-top: 2rem;
+      padding: 2rem;
+      background-color: $color-primary;
+      border: none;
+      border-radius: 50px;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      transform-origin: center center;
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+
+  &__img {
+    height: 100%;
+    flex-basis: 50%;
+    flex-shrink: 0;
+    z-index: 2;
+
+    @include respond(tab-port) {
+      flex-basis: 60%;
+    }
+
+    & img {
+      width: 60%;
+    }
+  }
+
+  &__clip {
+    &--shadow {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      filter: drop-shadow(-2px 20px 10px rgba(0, 0, 0, 0.5));
+      z-index: 1;
+    }
+
+    &--overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+
+      width: 400px;
+      height: 100%;
+      background-color: #ffffff;
+      clip-path: path(
+        "M 400 0 Q 61 56 251 329 Q 296 388 186 416 Q 38 454 114 511 Q 187 562 3 586 L 400 586 Z"
+      );
+      z-index: 3;
+      mix-blend-mode: overlay;
+
+      @include respond(tab-port) {
+        clip-path: path(
+          "M 400 0 Q 42 54 272 400 Q 383 516 138 570 Q 8 599 213 640 Q 365 663 0 700 L 400 700 Z"
+        );
+      }
+
+      @include respond(phone) {
+        clip-path: path(
+          "M 400 0 Q 160 103 254 513 Q 282 669 0 701 L 400 701 Z"
+        );
+      }
+    }
+
+    width: 400px;
+    height: 100%;
+    background-color: $color-primary-fade2;
+    clip-path: path(
+      "M 400 0 Q 61 56 251 329 Q 296 388 186 416 Q 38 454 114 511 Q 187 562 3 586 L 400 586 Z"
+    );
+
+    @include respond(tab-port) {
+      clip-path: path(
+        "M 400 0 Q 42 54 272 400 Q 383 516 138 570 Q 8 599 213 640 Q 365 663 0 700 L 400 700 Z"
+      );
+    }
+
+    @include respond(phone) {
+      clip-path: path("M 400 0 Q 160 103 254 513 Q 282 669 0 701 L 400 701 Z");
+    }
+  }
+
+  &__plus {
+    position: absolute;
+    z-index: 3;
+
+    &--1 {
+      bottom: 10%;
+      left: 6%;
+      transform: rotate(15deg);
+
+      @include respond(big-desktop) {
+        left: 3%;
+      }
+    }
+
+    &--2 {
+      top: 10%;
+      right: 15%;
+      transform: rotate(55deg);
+
+      @include respond(tab-land) {
+        top: 7%;
+        right: 20%;
+      }
+
+      @include respond(tab-port) {
+        top: 5%;
+        right: 10%;
+      }
+    }
+  }
+}

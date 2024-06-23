@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.71b256e8.css",
-    "main.js": "/static/js/main.c850f1b7.js",
+    "main.css": "/static/css/main.6ae6a0cc.css",
+    "main.js": "/static/js/main.bb9153ce.js",
     "static/js/112.0efe095b.chunk.js": "/static/js/112.0efe095b.chunk.js",
     "static/js/592.dc330327.chunk.js": "/static/js/592.dc330327.chunk.js",
     "static/js/960.18d51065.chunk.js": "/static/js/960.18d51065.chunk.js",
@@ -14,14 +14,14 @@
     "static/media/Gotham Black Regular.woff": "/static/media/Gotham Black Regular.198bfb9dee3d949e3cea.woff",
     "static/media/Gotham Medium.woff": "/static/media/Gotham Medium.c50041219bad1e0a2cd7.woff",
     "index.html": "/index.html",
-    "main.71b256e8.css.map": "/static/css/main.71b256e8.css.map",
-    "main.c850f1b7.js.map": "/static/js/main.c850f1b7.js.map",
+    "main.6ae6a0cc.css.map": "/static/css/main.6ae6a0cc.css.map",
+    "main.bb9153ce.js.map": "/static/js/main.bb9153ce.js.map",
     "112.0efe095b.chunk.js.map": "/static/js/112.0efe095b.chunk.js.map",
     "592.dc330327.chunk.js.map": "/static/js/592.dc330327.chunk.js.map",
     "960.18d51065.chunk.js.map": "/static/js/960.18d51065.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.71b256e8.css",
-    "static/js/main.c850f1b7.js"
+    "static/css/main.6ae6a0cc.css",
+    "static/js/main.bb9153ce.js"
   ]
 }

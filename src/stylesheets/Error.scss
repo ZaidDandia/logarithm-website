@@ -3,6 +3,14 @@
 .section__error {
   height: 40vh;
   padding: 20rem;
+
+  @include respond(tab-port) {
+    padding: 20rem 10rem;
+  }
+
+  @include respond(phone) {
+    padding: 20rem 5rem;
+  }
 }
 
 .error {
@@ -12,10 +20,34 @@
     font-weight: 200;
     color: $color-primary;
     margin-bottom: 3rem;
+
+    @include respond(tab-land) {
+      font-size: 6rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 4rem;
+    }
+
+    @include respond(phone) {
+      font-size: 3rem;
+    }
   }
 
   &__detail {
     font-size: 4rem;
     color: #ffffff70;
+
+    @include respond(tab-land) {
+      font-size: 3rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 2rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.5rem;
+    }
   }
 }

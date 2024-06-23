@@ -8,10 +8,10 @@
   position: relative;
   transition: all 0.2s ease-in-out;
   overflow-y: hidden;
-  height: calc(584px - 16rem);
+  height: calc(750px - 16rem);
 
   @include respond(tab-port) {
-    height: calc(700px - 16rem);
+    height: calc(770px - 16rem);
   }
 
   &__container {
@@ -115,49 +115,49 @@
       z-index: 1;
     }
 
-    &--overlay {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
+    // &--overlay {
+    //   position: absolute;
+    //   top: 0;
+    //   bottom: 0;
+    //   right: 0;
 
-      width: 400px;
-      height: 100%;
-      background-color: #ffffff;
-      clip-path: path(
-        "M 400 0 Q 61 56 251 329 Q 296 388 186 416 Q 38 454 114 511 Q 187 562 3 586 L 400 586 Z"
-      );
-      z-index: 3;
-      mix-blend-mode: overlay;
+    //   width: 400px;
+    //   height: 100%;
+    //   background-color: #ffffff;
+    //   clip-path: path(
+    //     "M 400 0 Q 61 56 265 303 Q 361 416 215 474 Q 19 546 185 647 Q 297 725 0 752 L 411 751 Z"
+    //   );
+    //   z-index: 3;
+    //   mix-blend-mode: overlay;
 
-      @include respond(tab-port) {
-        clip-path: path(
-          "M 400 0 Q 42 54 272 400 Q 383 516 138 570 Q 8 599 213 640 Q 365 663 0 700 L 400 700 Z"
-        );
-      }
+    //   @include respond(tab-port) {
+    //     clip-path: path(
+    //       "M 400 0 Q 42 54 272 400 Q 383 516 138 570 Q 8 599 196 666 Q 362 730 0 771 L 400 771 Z"
+    //     );
+    //   }
 
-      @include respond(phone) {
-        clip-path: path(
-          "M 400 0 Q 160 103 254 513 Q 282 669 0 701 L 400 701 Z"
-        );
-      }
-    }
+    //   @include respond(phone) {
+    //     clip-path: path(
+    //       "M 400 0 Q 137 102 254 513 Q 314 743 0 771 L 400 771 Z"
+    //     );
+    //   }
+    // }
 
     width: 400px;
     height: 100%;
-    background-color: $color-primary-fade2;
+    background-color: $color-primary;
     clip-path: path(
-      "M 400 0 Q 61 56 251 329 Q 296 388 186 416 Q 38 454 114 511 Q 187 562 3 586 L 400 586 Z"
+      "M 400 0 Q 61 56 265 303 Q 361 416 215 474 Q 19 546 185 647 Q 297 725 0 752 L 411 751 Z"
     );
 
     @include respond(tab-port) {
       clip-path: path(
-        "M 400 0 Q 42 54 272 400 Q 383 516 138 570 Q 8 599 213 640 Q 365 663 0 700 L 400 700 Z"
+        "M 400 0 Q 42 54 272 400 Q 383 516 138 570 Q 8 599 196 666 Q 362 730 0 771 L 400 771 Z"
       );
     }
 
     @include respond(phone) {
-      clip-path: path("M 400 0 Q 160 103 254 513 Q 282 669 0 701 L 400 701 Z");
+      clip-path: path("M 400 0 Q 137 102 254 513 Q 314 743 0 771 L 400 771 Z");
     }
   }
 

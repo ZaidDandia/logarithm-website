@@ -15,7 +15,7 @@ const Home = ({ isSmallScreen }) => {
   // Carousel function
   const [activeStep, setActiveStep] = useState(0);
   const [activeHeight, setActiveHeight] = useState("auto");
-  const [elsCarousel, setElsCarousel] = useState([0, 1, 2, 3]);
+  const elsCarousel = [0, 1, 2, 3];
   const sliderRef = useRef(null);
 
   const transitionStyles = (activeNum) => {
@@ -34,7 +34,6 @@ const Home = ({ isSmallScreen }) => {
 
     return styles;
   };
-  let transStyles = transitionStyles(activeStep);
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) =>
@@ -57,7 +56,9 @@ const Home = ({ isSmallScreen }) => {
     let timeoutId;
     if (window.innerWidth <= 600) {
       timeoutId = setTimeout(() => {
-        handleNext();
+        setActiveStep((prevActiveStep) =>
+          prevActiveStep === elsCarousel.length - 1 ? 0 : prevActiveStep + 1
+        );
       }, 2000);
     }
 
@@ -81,9 +82,9 @@ const Home = ({ isSmallScreen }) => {
     return () => {
       clearTimeout(timeoutId);
     };
-  }, [activeStep, handleNext]);
+  }, [activeStep, elsCarousel.length]);
 
-  // Setting second section gap to align with heading
+  // Setting last section gap to align with heading
   const servicesHeadingRef = useRef(null);
   const servicesDesignRef = useRef(null);
 
@@ -126,24 +127,28 @@ const Home = ({ isSmallScreen }) => {
               <span style={{ display: "block" }}>your way.</span>
             </h3>
             <p className="hero__desc">
-              Over the past year, Logarithm has worked with 20 different clients
-              to delivery different tasks. From website design to{" "}
+              Logarithm Technologies empowers clients globally by transforming
+              their visions into tangible results through industry-leading
+              product development.
             </p>
-            <a className="hero__btn" href="#main">
+            {/* <a className="hero__btn" href="#main">
               &#x2193;
-            </a>
+            </a> */}
           </div>
         </section>
       </header>
       <section className="white" id="main">
         <div className="white__container">
           <div className="white__text">
-            <h4 className="white__text--heading">Add some text here</h4>
+            <h4 className="white__text--heading">Book a consultation.</h4>
             <p className="white__text--details">
-              Consectetur Lorem magna deserunt sit qui et consequat ex. Aute ea
-              dolore irure eu. Officia commodo in qui pariatur. Consectetur
-              Lorem magna deserunt sit qui et consequat ex. Aute ea dolore irure
-              eu. Officia commodo in qui pariatur.
+              Unleash the full potential of your brand. Join Logarithm
+              Technologies' distinguished roster of clients, and let our team of
+              experts be your trusted partner in innovation. We leverage
+              cutting-edge technology to translate your vision into tangible
+              results, empowering you to achieve your business goals and gain a
+              competitive edge. Partner with Logarithm today and experience the
+              transformative power of industry-leading solutions.
             </p>
             <button className="white__text--btn">Book Appointment &gt;</button>
           </div>
@@ -326,9 +331,11 @@ const Home = ({ isSmallScreen }) => {
               <h4 className="services__section--heading">&lt;/&gt;</h4>
               <h4 className="services__section--subheading">Web development</h4>
               <p className="services__section--details">
-                We are pioneers when it comes to creating unique and meaningful
-                websites for your business. From creating a unique frontend
-                design, to creating secure backends, we do it all.
+                Pioneering Innovation. We craft captivating user experiences
+                through stunning, user-centric frontend design, coupled with
+                secure and robust backend development. Our team leverages
+                cutting-edge technologies to build meaningful web solutions that
+                drive results and propel your brand forward.
               </p>
             </div>
             <div className="services__section services__section--empty"></div>
@@ -339,9 +346,11 @@ const Home = ({ isSmallScreen }) => {
               <h4 className="services__section--heading">UI/UX</h4>
               <h4 className="services__section--subheading">Frontend design</h4>
               <p className="services__section--details">
-                We are pioneers when it comes to creating unique and meaningful
-                websites for your business. From creating a unique frontend
-                design, to creating secure backends, we do it all.
+                Bridge the Gap. We don't just design interfaces, we craft
+                intuitive user journeys that seamlessly bridge the gap between
+                your vision and user needs. Our team of UX/UI experts optimizes
+                usability, fosters engagement, and drives conversions through
+                beautiful and intuitive design solutions.
               </p>
             </div>
             <div className="services__section services__section--empty"></div>
@@ -354,9 +363,11 @@ const Home = ({ isSmallScreen }) => {
               <h4 className="services__section--heading">AI</h4>
               <h4 className="services__section--subheading">AI integration</h4>
               <p className="services__section--details">
-                We are pioneers when it comes to creating unique and meaningful
-                websites for your business. From creating a unique frontend
-                design, to creating secure backends, we do it all.
+                Unlock the Power of Intelligence. We integrate cutting-edge AI
+                solutions to empower your business. Our team of AI specialists
+                tailors intelligent automation and machine learning algorithms
+                to transform your data into actionable insights, driving
+                efficiency, personalization, and growth.
               </p>
             </div>
             <div className="services__section services__section--empty">

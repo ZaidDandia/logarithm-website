@@ -106,3 +106,8 @@ body {
     scrollbar-width: thin;
   }
 }
+
+::selection {
+  background-color: $color-primary;
+  color: $color-text;
+}

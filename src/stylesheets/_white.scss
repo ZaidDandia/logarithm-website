@@ -14,6 +14,11 @@
     height: calc(770px - 16rem);
   }
 
+  &.white__animation .white__plus {
+    transform-origin: center;
+    animation: spin 2.5s linear infinite;
+  }
+
   &__container {
     max-width: 1440px;
     display: flex;
@@ -34,7 +39,7 @@
     display: flex;
     flex-direction: column;
     // mix-blend-mode: screen;
-    z-index: 2;
+    // z-index: 2;
     // padding-top: 5rem;
 
     &--heading {
@@ -43,6 +48,7 @@
       color: $color-primary;
       text-transform: uppercase;
       margin-bottom: 1rem;
+      z-index: 2;
       // mix-blend-mode: difference;
 
       @include respond(big-desktop) {
@@ -60,6 +66,7 @@
 
     &--details {
       font-size: 3rem;
+      z-index: 2;
 
       @include respond(tab-land) {
         font-size: 2.5rem;
@@ -83,6 +90,8 @@
       transition: all 0.2s ease-in-out;
       cursor: pointer;
       transform-origin: center center;
+      position: relative;
+      z-index: 4;
 
       &:hover {
         transform: scale(1.03);
@@ -115,37 +124,41 @@
       z-index: 1;
     }
 
-    // &--overlay {
-    //   position: absolute;
-    //   top: 0;
-    //   bottom: 0;
-    //   right: 0;
+    &--overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
 
-    //   width: 400px;
-    //   height: 100%;
-    //   background-color: #ffffff;
-    //   clip-path: path(
-    //     "M 400 0 Q 61 56 265 303 Q 361 416 215 474 Q 19 546 185 647 Q 297 725 0 752 L 411 751 Z"
-    //   );
-    //   z-index: 3;
-    //   mix-blend-mode: overlay;
+      width: 400px;
+      height: 100%;
+      z-index: 3;
+      mix-blend-mode: overlay;
 
-    //   @include respond(tab-port) {
-    //     clip-path: path(
-    //       "M 400 0 Q 42 54 272 400 Q 383 516 138 570 Q 8 599 196 666 Q 362 730 0 771 L 400 771 Z"
-    //     );
-    //   }
+      &-child {
+        height: 100%;
+        width: 100%;
+        background-color: #ffffff;
+        clip-path: path(
+          "M 400 0 Q 61 56 265 303 Q 361 416 215 474 Q 19 546 185 647 Q 297 725 0 752 L 411 751 Z"
+        );
+        @include respond(tab-port) {
+          clip-path: path(
+            "M 400 0 Q 42 54 272 400 Q 383 516 138 570 Q 8 599 196 666 Q 362 730 0 771 L 400 771 Z"
+          );
+        }
 
-    //   @include respond(phone) {
-    //     clip-path: path(
-    //       "M 400 0 Q 137 102 254 513 Q 314 743 0 771 L 400 771 Z"
-    //     );
-    //   }
-    // }
+        @include respond(phone) {
+          clip-path: path(
+            "M 400 0 Q 137 102 254 513 Q 314 743 0 771 L 400 771 Z"
+          );
+        }
+      }
+    }
 
     width: 400px;
     height: 100%;
-    background-color: $color-primary;
+    background-color: $color-primary-fade2;
     clip-path: path(
       "M 400 0 Q 61 56 265 303 Q 361 416 215 474 Q 19 546 185 647 Q 297 725 0 752 L 411 751 Z"
     );

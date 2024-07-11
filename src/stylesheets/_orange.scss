@@ -12,6 +12,10 @@
     overflow: hidden;
   }
 
+  &.orange__animation .orange__header--design {
+    animation: growFromLeft 1s ease-out forwards;
+  }
+
   &__container {
     max-width: 1440px;
     width: 100%;
@@ -39,11 +43,13 @@
     }
 
     &--design {
-      flex-basis: auto;
-      flex-grow: 1;
+      // flex-basis: auto;
+      // flex-grow: 1;
       border-bottom: 1.5rem solid #ffffff;
       margin-bottom: 1.35rem;
       margin-left: 1rem;
+      width: 0;
+      transform-origin: left;
 
       @include respond(tab-land) {
         border-width: 1rem;

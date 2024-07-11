@@ -38,6 +38,11 @@
     text-align: center;
     text-transform: uppercase;
     transition: all 0.2s ease-in-out;
+    transform: translateY(50px);
+    opacity: 0;
+    animation: fadeInBottom1 1s ease forwards;
+
+    @include fade-in-from-bottom(fadeInBottom1, 50px);
 
     @include respond(tab-land) {
       font-size: 6rem;
@@ -57,6 +62,11 @@
     width: 60%;
     text-align: center;
     justify-self: center;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInBottom2 1s ease 0.5s forwards;
+
+    @include fade-in-from-bottom(fadeInBottom2, 20px);
 
     @include respond(tab-land) {
       font-size: 2rem;

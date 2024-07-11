@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import ParticleBackground from "./particles";
+import React, { useRef } from "react";
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
+// import ParticleBackground from "./particles";
 // import ReactFullpage from "@fullpage/react-fullpage-umd";
 import logo from "../images/logo";
 // import centro from "./images/Centro.png";
@@ -79,7 +79,7 @@ function Nav({ isSmallScreen, isScrolled }) {
                 </a>
               </li>
               <li className="nav__item">
-                <a className="nav__link" href="#services">
+                <a className="nav__link" href="/">
                   Services
                 </a>
               </li>
@@ -95,7 +95,7 @@ function Nav({ isSmallScreen, isScrolled }) {
                 </div>
               </li>
               <li className="nav__item">
-                <a className="nav__link" href="#projects">
+                <a className="nav__link" href="/">
                   About Us
                 </a>
               </li>

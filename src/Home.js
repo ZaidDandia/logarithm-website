@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
-import ParticleBackground from "./components/particles";
+// import { Carousel } from "react-responsive-carousel";
+// import ParticleBackground from "./components/particles";
 // import ReactFullpage from "@fullpage/react-fullpage-umd";
-import logo from "./images/logo";
+// import logo from "./images/logo";
 // import centro from "./images/Centro.png";
 // import throwdown from "./images/ThaThrowdown.png";
 // import vitpay from "./images/Vitpay.png";
@@ -15,7 +15,19 @@ const Home = ({ isSmallScreen }) => {
   // Carousel function
   const [activeStep, setActiveStep] = useState(0);
   const [activeHeight, setActiveHeight] = useState("auto");
-  const elsCarousel = [0, 1, 2, 3];
+  const elsCarousel = [
+    {
+      text: "I've had the pleasure of working with Zaid and the team on the development of my application, a process which is still ongoing and I couldn't be more impressed. Their professionalism is top-notch, consistently demonstrating a high level of expertise and reliability throughout the project. The quality of their customer relations is exceptional, always available to address any concerns promptly and effectively. What sets them apart is their commitment to going beyond what is expected, ensuring that every aspect of the job is completed to the highest standards. I highly recommend Zaid and the team for any IT development needs.",
+      name: "Lanre",
+      company: "ThaThrowdown",
+    },
+    {
+      text: "I recently used Logarithm Technologies to create a credit lending and mobile wallet, and I couldn't be more pleased with the experience. From the outset, their team was professional, knowledgeable, and attentive to my needs. The process was smooth and efficient, with clear communication at every step. The final product is user- friendly, secure, and exactly what I was looking for. Logarithm Technologies truly  exceeded my expectations, and I highly recommend their services to anyone in need of innovative financial solutions. Thank you, Logarithm Technologies, for your exceptional work.",
+      name: "Alex Mudzingwa",
+      company: "Vitpay",
+    },
+    2,
+  ];
   const sliderRef = useRef(null);
 
   const transitionStyles = (activeNum) => {
@@ -54,7 +66,7 @@ const Home = ({ isSmallScreen }) => {
 
   useEffect(() => {
     let timeoutId;
-    if (window.innerWidth <= 600) {
+    if (window.innerWidth < 600) {
       timeoutId = setTimeout(() => {
         setActiveStep((prevActiveStep) =>
           prevActiveStep === elsCarousel.length - 1 ? 0 : prevActiveStep + 1
@@ -62,6 +74,12 @@ const Home = ({ isSmallScreen }) => {
       }, 2000);
     }
 
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [activeStep, elsCarousel.length]);
+
+  useLayoutEffect(() => {
     if (sliderRef.current) {
       const children = sliderRef.current.childNodes;
       let height = 0;
@@ -74,21 +92,60 @@ const Home = ({ isSmallScreen }) => {
             height += el.children[i].offsetHeight;
           }
           // console.log(height);
-          setActiveHeight(`${height + 40}px`);
+          setActiveHeight(`${height + 100}px`);
         }
       });
     }
-
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, [activeStep, elsCarousel.length]);
+  }, [activeStep]);
 
   // Setting last section gap to align with heading
   const servicesHeadingRef = useRef(null);
   const servicesDesignRef = useRef(null);
+  // All section animation on scroll functionality
+  const whiteRef = useRef(null);
+  const orangeRef = useRef(null);
+  const whatRef = useRef(null);
+  const servicesRef = useRef(null);
+  const [whiteVisible, setWhiteVisible] = useState(false);
+  const [orangeVisible, setOrangeVisible] = useState(false);
+  const [whatVisible, setWhatVisible] = useState(false);
+  const [servicesVisible, setServicesVisible] = useState(false);
 
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.target === whiteRef.current) {
+            if (entry.isIntersecting) {
+              setWhiteVisible(true);
+              observer.unobserve(entry.target);
+            }
+          } else if (entry.target === orangeRef.current) {
+            if (entry.isIntersecting) {
+              setOrangeVisible(true);
+              observer.unobserve(entry.target);
+            }
+          } else if (entry.target === whatRef.current) {
+            if (entry.isIntersecting) {
+              setWhatVisible(true);
+              observer.unobserve(entry.target);
+            }
+          } else if (entry.target === servicesRef.current) {
+            if (entry.isIntersecting) {
+              setServicesVisible(true);
+              observer.unobserve(entry.target);
+            }
+          }
+        });
+      },
+      { threshold: 0.25 }
+    );
+
+    if (whiteRef.current) observer.observe(whiteRef.current);
+    if (orangeRef.current) observer.observe(orangeRef.current);
+    if (whatRef.current) observer.observe(whatRef.current);
+    if (servicesRef.current) observer.observe(servicesRef.current);
+
     const setPhoneState = () => {
       if (window.innerWidth <= 600) {
         setPhone(true);
@@ -112,10 +169,32 @@ const Home = ({ isSmallScreen }) => {
     };
     window.addEventListener("resize", handleResize);
 
+    const curWhiteRef = whiteRef.current;
+    const curOrangeRef = orangeRef.current;
+    const curWhatRef = whatRef.current;
+    const curServicesRef = servicesRef.current;
     return () => {
       window.removeEventListener("resize", handleResize);
+
+      if (observer && curWhiteRef) observer.unobserve(curWhiteRef);
+      if (observer && curOrangeRef) observer.unobserve(curOrangeRef);
+      if (observer && curWhatRef) observer.unobserve(curWhatRef);
+      if (observer && curServicesRef) observer.unobserve(curServicesRef);
     };
   }, []);
+
+  //email button link mailto functionality
+  const handleEmailButtonClick = () => {
+    const email = "contact@logarithmtechnologies.com";
+    const subject = "We want to work";
+    const body = "Hello,\n";
+
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailtoLink;
+  };
 
   return (
     <>
@@ -137,7 +216,11 @@ const Home = ({ isSmallScreen }) => {
           </div>
         </section>
       </header>
-      <section className="white" id="main">
+      <section
+        className={`white ${whiteVisible ? "white__animation" : ""}`}
+        id="main"
+        ref={whiteRef}
+      >
         <div className="white__container">
           <div className="white__text">
             <h4 className="white__text--heading">Book a consultation.</h4>
@@ -150,7 +233,12 @@ const Home = ({ isSmallScreen }) => {
               competitive edge. Partner with Logarithm today and experience the
               transformative power of industry-leading solutions.
             </p>
-            <button className="white__text--btn">Book Appointment &gt;</button>
+            <button
+              className="white__text--btn"
+              onClick={handleEmailButtonClick}
+            >
+              Book Appointment &gt;
+            </button>
           </div>
           <div className="white__img">
             <img alt="design element" src={Man} />
@@ -158,7 +246,30 @@ const Home = ({ isSmallScreen }) => {
           <div className="white__clip--shadow">
             <div className="white__clip"></div>
           </div>
-          <div className="white__clip--overlay"></div>
+          <div className="white__clip--overlay">
+            <div className="white__clip--overlay-child"></div>
+            {/* <svg
+              style={{ width: "100%", height: "100%" }}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <clipPath id="myClipPath">
+                  <path d="M 400 0 Q 61 56 265 303 Q 361 416 215 474 Q 19 546 185 647 Q 297 725 0 752 L 411 751 Z" />
+                </clipPath>
+              </defs>
+
+              <rect
+                x="0"
+                y="0"
+                width="800"
+                height="800"
+                style={{
+                  clipPath: "url(#myClipPath)",
+                  fill: "#ffffff",
+                }}
+              />
+            </svg> */}
+          </div>
           <div className="white__plus white__plus--1">
             <PlusSVG width={50} height={50} color="#515151" />
           </div>
@@ -171,7 +282,10 @@ const Home = ({ isSmallScreen }) => {
           </div>
         </div>
       </section>
-      <section className="orange">
+      <section
+        className={`orange ${orangeVisible ? "orange__animation" : ""}`}
+        ref={orangeRef}
+      >
         <div className="orange__container">
           <div className="orange__header">
             <h3 className="orange__heading">
@@ -184,7 +298,7 @@ const Home = ({ isSmallScreen }) => {
               <svg viewBox="0 0 300 100" preserveAspectRatio="none">
                 <path
                   d="M0,0 300,0 300,100 0,100z"
-                  vector-effect="non-scaling-stroke"
+                  vectorEffect="non-scaling-stroke"
                 />
               </svg>
               <span>Client 1</span>
@@ -193,7 +307,7 @@ const Home = ({ isSmallScreen }) => {
               <svg viewBox="0 0 300 100" preserveAspectRatio="none">
                 <path
                   d="M0,0 300,0 300,100 0,100z"
-                  vector-effect="non-scaling-stroke"
+                  vectorEffect="non-scaling-stroke"
                 />
               </svg>
               <span>Client 2</span>
@@ -202,7 +316,7 @@ const Home = ({ isSmallScreen }) => {
               <svg viewBox="0 0 300 100" preserveAspectRatio="none">
                 <path
                   d="M0,0 300,0 300,100 0,100z"
-                  vector-effect="non-scaling-stroke"
+                  vectorEffect="non-scaling-stroke"
                 />
               </svg>
               <span>Client 3</span>
@@ -211,7 +325,7 @@ const Home = ({ isSmallScreen }) => {
               <svg viewBox="0 0 300 100" preserveAspectRatio="none">
                 <path
                   d="M0,0 300,0 300,100 0,100z"
-                  vector-effect="non-scaling-stroke"
+                  vectorEffect="non-scaling-stroke"
                 />
               </svg>
               <span>Client 4</span>
@@ -220,7 +334,7 @@ const Home = ({ isSmallScreen }) => {
               <svg viewBox="0 0 300 100" preserveAspectRatio="none">
                 <path
                   d="M0,0 300,0 300,100 0,100z"
-                  vector-effect="non-scaling-stroke"
+                  vectorEffect="non-scaling-stroke"
                 />
               </svg>
               <span>Client 5</span>
@@ -229,7 +343,7 @@ const Home = ({ isSmallScreen }) => {
               <svg viewBox="0 0 300 100" preserveAspectRatio="none">
                 <path
                   d="M0,0 300,0 300,100 0,100z"
-                  vector-effect="non-scaling-stroke"
+                  vectorEffect="non-scaling-stroke"
                 />
               </svg>
               <span>Client 6</span>
@@ -242,7 +356,10 @@ const Home = ({ isSmallScreen }) => {
           <div className="orange__bar orange__bar--5"></div>
         </div>
       </section>
-      <section className="what">
+      <section
+        className={`what ${whatVisible ? "what__animation" : ""}`}
+        ref={whatRef}
+      >
         <div className="what__container">
           <h3 className="what__heading">
             What they<span>say.</span>
@@ -266,10 +383,10 @@ const Home = ({ isSmallScreen }) => {
                     }`}
                     style={{
                       width: `${100 / elsCarousel.length}%`,
-                      ...(activeStep === elsCarousel.length - 1 && index === 0
-                        ? transitionStyles(index)["right"]
-                        : activeStep === 0 && index === elsCarousel.length - 1
+                      ...(activeStep === 0 && index === elsCarousel.length - 1
                         ? transitionStyles(index)["left"]
+                        : activeStep === elsCarousel.length - 1 && index === 0
+                        ? transitionStyles(index)["right"]
                         : transitionStyles(index)[
                             activeStep > index
                               ? "left"
@@ -281,22 +398,15 @@ const Home = ({ isSmallScreen }) => {
                   >
                     <div className="what__img"></div>
                     <div className="what__details">
-                      Lorem laboris laboris sint incididunt sint officia aliquip
-                      laboris tempor ut voluptate. Ipsum aliquip laboris dolor
-                      nostrud et mollit cillum in Lorem. In ipsum occaecat ad
-                      nulla qui.
-                      {index === 1 && (
-                        <p>
-                          Lorem laboris laboris sint incididunt sint officia
-                          aliquip laboris tempor ut voluptate. Ipsum aliquip
-                          laboris dolor nostrud et mollit cillum in Lorem. In
-                          ipsum occaecat ad nulla qui.
-                        </p>
-                      )}
+                      {el?.text
+                        ? el.text
+                        : "Lorem laboris laboris sint incididunt sint officia aliquip laboris tempor ut voluptate. Ipsum aliquip laboris dolor nostrud et mollit cillum in Lorem. In ipsum occaecat ad nulla qui."}
                     </div>
                     <div className="what__signatures">
-                      <h4 className="what__name">Bob Odenkirk {el + 1}</h4>
-                      <p className="what__position">CEO - CNN</p>
+                      <h4 className="what__name">
+                        {el?.name} {index + 1}
+                      </h4>
+                      <p className="what__position">CEO - {el?.company}</p>
                     </div>
                   </div>
                 );
@@ -323,7 +433,10 @@ const Home = ({ isSmallScreen }) => {
           )}
         </div>
       </section>
-      <section className="services">
+      <section
+        className={`services ${servicesVisible ? "services__animation" : ""}`}
+        ref={servicesRef}
+      >
         <div className="services__container">
           <h3 className="services__heading--small">Our Services</h3>
           <div className="services__col services__col--1">
@@ -370,7 +483,10 @@ const Home = ({ isSmallScreen }) => {
                 efficiency, personalization, and growth.
               </p>
             </div>
-            <div className="services__section services__section--empty">
+            <div
+              className="services__section services__section--empty"
+              onClick={handleEmailButtonClick}
+            >
               Connect with us <span>&gt;</span>
             </div>
           </div>

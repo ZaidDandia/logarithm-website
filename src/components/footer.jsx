@@ -6,6 +6,9 @@ import logo from "../images/logo";
 // import centro from "./images/Centro.png";
 // import throwdown from "./images/ThaThrowdown.png";
 // import vitpay from "./images/Vitpay.png";
+import LinkedIn from "./../images/linkedin.png";
+import Instagram from "./../images/instagram.png";
+import Whatsapp from "./../images/whatsapp.png";
 import "../stylesheets/App.scss";
 
 function Footer() {
@@ -31,9 +34,27 @@ function Footer() {
             </li>
           </ul>
           <div className="footer__links">
-            <div className="footer__links--item">{/* <img/> */}</div>
-            <div className="footer__links--item">{/* <img/> */}</div>
-            <div className="footer__links--item">{/* <img/> */}</div>
+            <div
+              className="footer__links--item"
+              onClick={() => {
+                window.open("https://www.linkedin.com/company/logarithmtech/");
+              }}
+            >
+              <img src={LinkedIn} alt="Linkedin" />
+            </div>
+            <div
+              className="footer__links--item"
+              onClick={() => {
+                window.open("https://www.instagram.com/logarithm.tech/");
+              }}
+            >
+              <img alt="Instagram" src={Instagram} />
+            </div>
+            <div className="footer__links--item" onClick={() => {
+              window.open("https://wa.me/447449068134");
+            }}>
+              <img alt="Whatsapp" src={Whatsapp} />
+            </div>
           </div>
         </div>
         <div className="footer__banner">

@@ -101,11 +101,19 @@
       height: 4rem;
       width: 4rem;
       border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
       // background-color: $color-primary;
       background-color: $color-dark-2;
 
       &:not(:last-child) {
         margin-right: 2rem;
+      };
+      & img{
+        width: 65%;
+        aspect-ratio: 1;
       }
     }
   }

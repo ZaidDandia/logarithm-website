@@ -35,7 +35,6 @@ const Home = ({ isSmallScreen }) => {
       name: "Alex Mudzingwa",
       company: "Vitpay",
     },
-    2,
   ];
   const sliderRef = useRef(null);
 

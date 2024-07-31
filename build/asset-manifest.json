@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.fb1ac5ca.css",
-    "main.js": "/static/js/main.7d9c4331.js",
+    "main.css": "/static/css/main.50619026.css",
+    "main.js": "/static/js/main.43be99bd.js",
     "static/js/112.0efe095b.chunk.js": "/static/js/112.0efe095b.chunk.js",
     "static/js/592.dc330327.chunk.js": "/static/js/592.dc330327.chunk.js",
     "static/js/960.18d51065.chunk.js": "/static/js/960.18d51065.chunk.js",
@@ -19,14 +19,14 @@
     "static/media/Gotham Medium.woff": "/static/media/Gotham Medium.c50041219bad1e0a2cd7.woff",
     "static/media/Trema White.png": "/static/media/Trema White.7f450cd545cac4b7d8ce.png",
     "index.html": "/index.html",
-    "main.fb1ac5ca.css.map": "/static/css/main.fb1ac5ca.css.map",
-    "main.7d9c4331.js.map": "/static/js/main.7d9c4331.js.map",
+    "main.50619026.css.map": "/static/css/main.50619026.css.map",
+    "main.43be99bd.js.map": "/static/js/main.43be99bd.js.map",
     "112.0efe095b.chunk.js.map": "/static/js/112.0efe095b.chunk.js.map",
     "592.dc330327.chunk.js.map": "/static/js/592.dc330327.chunk.js.map",
     "960.18d51065.chunk.js.map": "/static/js/960.18d51065.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb1ac5ca.css",
-    "static/js/main.7d9c4331.js"
+    "static/css/main.50619026.css",
+    "static/js/main.43be99bd.js"
   ]
 }

@@ -448,9 +448,7 @@ const Home = ({ isSmallScreen }) => {
                         : "Lorem laboris laboris sint incididunt sint officia aliquip laboris tempor ut voluptate. Ipsum aliquip laboris dolor nostrud et mollit cillum in Lorem. In ipsum occaecat ad nulla qui."}
                     </div>
                     <div className="what__signatures">
-                      <h4 className="what__name">
-                        {el?.name} {index + 1}
-                      </h4>
+                      <h4 className="what__name">{el?.name}</h4>
                       <p className="what__position">CEO - {el?.company}</p>
                     </div>
                   </div>

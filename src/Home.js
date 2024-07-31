@@ -9,6 +9,15 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 // import vitpay from "./images/Vitpay.png";
 import PlusSVG from "./components/Plus";
 import Man from "./images/Man.png";
+import Centro from "./images/Centro White.png";
+import ThaThrowdown from "./images/ThaThrowdown White.png";
+import Vitpay from "./images/Vitpay White.png";
+import Trema from "./images/Trema White.png";
+import nattyNYC from "./images/nattyNYC white.png";
+import LearnersDen from "./images/Learners Den Logo White.png";
+import Learnify from "./images/Learnify White.png";
+import VI from "./images/VI White.png";
+import IDEA from "./images/IDE.A White.png";
 import "./stylesheets/App.scss";
 
 const Home = ({ isSmallScreen }) => {
@@ -295,58 +304,94 @@ const Home = ({ isSmallScreen }) => {
           </div>
           <div className="orange__clients">
             <div className="orange__clients__item">
-              <svg viewBox="0 0 300 100" preserveAspectRatio="none">
+              {/* <svg viewBox="0 0 300 100" preserveAspectRatio="none">
                 <path
                   d="M0,0 300,0 300,100 0,100z"
                   vectorEffect="non-scaling-stroke"
                 />
-              </svg>
-              <span>Client 1</span>
+              </svg> */}
+              <img src={Centro} alt="img" />
+              {/* Client 1 */}
             </div>
             <div className="orange__clients__item">
-              <svg viewBox="0 0 300 100" preserveAspectRatio="none">
+              {/* <svg viewBox="0 0 300 100" preserveAspectRatio="none">
                 <path
                   d="M0,0 300,0 300,100 0,100z"
                   vectorEffect="non-scaling-stroke"
                 />
-              </svg>
-              <span>Client 2</span>
+              </svg> */}
+              <img src={ThaThrowdown} alt="img" />
+              {/* Client 2 */}
             </div>
             <div className="orange__clients__item">
-              <svg viewBox="0 0 300 100" preserveAspectRatio="none">
+              {/* <svg viewBox="0 0 300 100" preserveAspectRatio="none">
                 <path
                   d="M0,0 300,0 300,100 0,100z"
                   vectorEffect="non-scaling-stroke"
                 />
-              </svg>
-              <span>Client 3</span>
+              </svg> */}
+              <img src={Vitpay} alt="img" />
+              {/* Client 3 */}
             </div>
             <div className="orange__clients__item">
-              <svg viewBox="0 0 300 100" preserveAspectRatio="none">
+              {/* <svg viewBox="0 0 300 100" preserveAspectRatio="none">
                 <path
                   d="M0,0 300,0 300,100 0,100z"
                   vectorEffect="non-scaling-stroke"
                 />
-              </svg>
-              <span>Client 4</span>
+              </svg> */}
+              <img src={Trema} alt="img" />
+              {/* Client 4 */}
             </div>
             <div className="orange__clients__item">
-              <svg viewBox="0 0 300 100" preserveAspectRatio="none">
+              {/* <svg viewBox="0 0 300 100" preserveAspectRatio="none">
                 <path
                   d="M0,0 300,0 300,100 0,100z"
                   vectorEffect="non-scaling-stroke"
                 />
-              </svg>
-              <span>Client 5</span>
+              </svg> */}
+              <img src={LearnersDen} alt="img" />
+              {/* Client 5 */}
             </div>
             <div className="orange__clients__item">
-              <svg viewBox="0 0 300 100" preserveAspectRatio="none">
+              {/* <svg viewBox="0 0 300 100" preserveAspectRatio="none">
                 <path
                   d="M0,0 300,0 300,100 0,100z"
                   vectorEffect="non-scaling-stroke"
                 />
-              </svg>
-              <span>Client 6</span>
+              </svg> */}
+              <img src={nattyNYC} alt="img" />
+              {/* Client 6 */}
+            </div>
+            <div className="orange__clients__item">
+              {/* <svg viewBox="0 0 300 100" preserveAspectRatio="none">
+                <path
+                  d="M0,0 300,0 300,100 0,100z"
+                  vectorEffect="non-scaling-stroke"
+                />
+              </svg> */}
+              <img src={Learnify} alt="img" />
+              {/* Client 6 */}
+            </div>
+            <div className="orange__clients__item">
+              {/* <svg viewBox="0 0 300 100" preserveAspectRatio="none">
+                <path
+                  d="M0,0 300,0 300,100 0,100z"
+                  vectorEffect="non-scaling-stroke"
+                />
+              </svg> */}
+              <img src={VI} alt="img" />
+              {/* Client 6 */}
+            </div>
+            <div className="orange__clients__item">
+              {/* <svg viewBox="0 0 300 100" preserveAspectRatio="none">
+                <path
+                  d="M0,0 300,0 300,100 0,100z"
+                  vectorEffect="non-scaling-stroke"
+                />
+              </svg> */}
+              <img src={IDEA} alt="img" />
+              {/* Client 6 */}
             </div>
           </div>
           <div className="orange__bar orange__bar--1"></div>

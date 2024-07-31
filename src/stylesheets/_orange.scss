@@ -91,6 +91,12 @@
       flex-basis: calc(33% - #{$gap-big});
       height: 30rem;
       position: relative;
+      background-color: #ffffff19;
+      backdrop-filter: blur(30px);
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       @include respond(tab-land) {
         flex-basis: calc(33% - #{$gap-med});
@@ -104,27 +110,33 @@
         flex-basis: 100%;
       }
 
-      & svg {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        height: 100%;
-        width: 100%;
+      & img {
+        width: 90%;
+        height: 85%;
+        object-fit: contain;
       }
 
-      & path {
-        fill: none;
-        stroke: #fff;
-        stroke-width: $border;
-        stroke-dasharray: 60, 10;
-      }
+      // & svg {
+      //   position: absolute;
+      //   top: 0px;
+      //   left: 0px;
+      //   height: 100%;
+      //   width: 100%;
+      // }
 
-      & span {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        padding: 10px;
-      }
+      // & path {
+      //   fill: none;
+      //   stroke: #fff;
+      //   stroke-width: $border;
+      //   stroke-dasharray: 60, 10;
+      // }
+
+      // & span {
+      //   position: absolute;
+      //   top: 0px;
+      //   left: 0px;
+      //   padding: 10px;
+      // }
     }
   }
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 // import ParticleBackground from "./components/particles";
 // import ReactFullpage from "@fullpage/react-fullpage-umd";

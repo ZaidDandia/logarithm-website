@@ -1,8 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import ParticleBackground from "./particles";
 // import ReactFullpage from "@fullpage/react-fullpage-umd";
-import logo from "../images/logo";
 // import centro from "./images/Centro.png";
 // import throwdown from "./images/ThaThrowdown.png";
 // import vitpay from "./images/Vitpay.png";
@@ -50,9 +48,12 @@ function Footer() {
             >
               <img alt="Instagram" src={Instagram} />
             </div>
-            <div className="footer__links--item" onClick={() => {
-              window.open("https://wa.me/447449068134");
-            }}>
+            <div
+              className="footer__links--item"
+              onClick={() => {
+                window.open("https://wa.me/447449068134");
+              }}
+            >
               <img alt="Whatsapp" src={Whatsapp} />
             </div>
           </div>

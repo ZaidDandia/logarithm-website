@@ -1,16 +1,18 @@
+@use "reset";
+
 .white {
   width: 100%;
-  background-color: $color-text;
+  background-color: reset.$color-text;
   color: #717171;
   display: flex;
   justify-content: center;
-  padding: $section-padding-2;
+  padding: reset.$section-padding-2;
   position: relative;
   transition: all 0.2s ease-in-out;
   overflow-y: hidden;
   height: calc(750px - 16rem);
 
-  @include respond(tab-port) {
+  @include reset.respond(tab-port) {
     height: calc(770px - 16rem);
   }
 
@@ -25,12 +27,12 @@
     align-items: center;
     margin: 0 10rem;
 
-    @include respond(tab-port) {
+    @include reset.respond(tab-port) {
       flex-direction: column;
       margin: 0 5rem;
     }
 
-    @include respond(phone) {
+    @include reset.respond(phone) {
       margin: 0 3rem;
     }
   }
@@ -45,21 +47,21 @@
     &--heading {
       font-family: Akira, sans-serif;
       font-size: 6rem;
-      color: $color-primary;
+      color: reset.$color-primary;
       text-transform: uppercase;
       margin-bottom: 1rem;
       z-index: 2;
       // mix-blend-mode: difference;
 
-      @include respond(big-desktop) {
+      @include reset.respond(big-desktop) {
         font-size: 5rem;
       }
 
-      @include respond(tab-land) {
+      @include reset.respond(tab-land) {
         font-size: 4rem;
       }
 
-      @include respond(tab-port) {
+      @include reset.respond(tab-port) {
         font-size: 3rem;
       }
     }
@@ -68,11 +70,11 @@
       font-size: 3rem;
       z-index: 2;
 
-      @include respond(tab-land) {
+      @include reset.respond(tab-land) {
         font-size: 2.5rem;
       }
 
-      @include respond(tab-port) {
+      @include reset.respond(tab-port) {
         font-size: 2rem;
       }
     }
@@ -80,11 +82,11 @@
     &--btn {
       font-family: inherit;
       font-size: 2rem;
-      color: $color-text;
+      color: reset.$color-text;
       align-self: flex-start;
       margin-top: 2rem;
       padding: 2rem;
-      background-color: $color-primary;
+      background-color: reset.$color-primary;
       border: none;
       border-radius: 50px;
       transition: all 0.2s ease-in-out;
@@ -105,7 +107,7 @@
     flex-shrink: 0;
     z-index: 2;
 
-    @include respond(tab-port) {
+    @include reset.respond(tab-port) {
       flex-basis: 60%;
     }
 
@@ -142,13 +144,13 @@
         clip-path: path(
           "M 400 0 Q 61 56 265 303 Q 361 416 215 474 Q 19 546 185 647 Q 297 725 0 752 L 411 751 Z"
         );
-        @include respond(tab-port) {
+        @include reset.respond(tab-port) {
           clip-path: path(
             "M 400 0 Q 42 54 272 400 Q 383 516 138 570 Q 8 599 196 666 Q 362 730 0 771 L 400 771 Z"
           );
         }
 
-        @include respond(phone) {
+        @include reset.respond(phone) {
           clip-path: path(
             "M 400 0 Q 137 102 254 513 Q 314 743 0 771 L 400 771 Z"
           );
@@ -158,18 +160,18 @@
 
     width: 400px;
     height: 100%;
-    background-color: $color-primary-fade2;
+    background-color: reset.$color-primary-fade2;
     clip-path: path(
       "M 400 0 Q 61 56 265 303 Q 361 416 215 474 Q 19 546 185 647 Q 297 725 0 752 L 411 751 Z"
     );
 
-    @include respond(tab-port) {
+    @include reset.respond(tab-port) {
       clip-path: path(
         "M 400 0 Q 42 54 272 400 Q 383 516 138 570 Q 8 599 196 666 Q 362 730 0 771 L 400 771 Z"
       );
     }
 
-    @include respond(phone) {
+    @include reset.respond(phone) {
       clip-path: path("M 400 0 Q 137 102 254 513 Q 314 743 0 771 L 400 771 Z");
     }
   }
@@ -183,7 +185,7 @@
       left: 6%;
       transform: rotate(15deg);
 
-      @include respond(big-desktop) {
+      @include reset.respond(big-desktop) {
         left: 3%;
       }
     }
@@ -193,12 +195,12 @@
       right: 15%;
       transform: rotate(55deg);
 
-      @include respond(tab-land) {
+      @include reset.respond(tab-land) {
         top: 7%;
         right: 20%;
       }
 
-      @include respond(tab-port) {
+      @include reset.respond(tab-port) {
         top: 5%;
         right: 10%;
       }

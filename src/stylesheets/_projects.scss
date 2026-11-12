@@ -1,19 +1,21 @@
+@use "reset";
+
 .projects {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: $section-padding;
-  background-image: linear-gradient(to bottom, $color-bg 45%, $color-dark-3);
+  padding: reset.$section-padding;
+  background-image: linear-gradient(to bottom, reset.$color-bg 45%, reset.$color-dark-3);
 
   &__carousel {
     width: 60%;
     height: 400px;
 
-    @include respond(tab-port) {
+    @include reset.respond(tab-port) {
       width: 80%;
     }
 
-    @include respond(phone) {
+    @include reset.respond(phone) {
       width: 95%;
     }
   }
@@ -48,7 +50,7 @@
     &--icon::after {
       content: "";
       position: absolute;
-      background-color: $color-primary;
+      background-color: reset.$color-primary;
       width: 4rem;
       height: 0.5rem;
       border-radius: 1rem;
@@ -94,7 +96,7 @@
       align-items: center;
       height: 400px;
 
-      @include respond(tab-port) {
+      @include reset.respond(tab-port) {
         height: 300px;
       }
     }
@@ -107,7 +109,7 @@
     display: flex;
     flex-direction: column;
 
-    @include respond(phone) {
+    @include reset.respond(phone) {
       width: 70%;
     }
 
@@ -116,7 +118,7 @@
       height: 5rem;
       border-top-left-radius: inherit;
       border-top-right-radius: inherit;
-      border: 0.1rem solid $color-text;
+      border: 0.1rem solid reset.$color-text;
       display: flex;
       align-items: center;
       padding: 2rem 3rem;
@@ -125,7 +127,7 @@
     &--heading {
       font-size: 2.5rem;
 
-      @include respond(tab-port) {
+      @include reset.respond(tab-port) {
         font-size: 2rem;
       }
     }
@@ -153,19 +155,19 @@
         height: 100%;
 
         &-1 {
-          background-color: $color-primary;
+          background-color: reset.$color-primary;
           -webkit-mask: url("../images/Centro.png") center / cover no-repeat;
           mask: url("../images/Centro.png") center / cover no-repeat;
         }
 
         &-2 {
-          background-color: $color-primary;
+          background-color: reset.$color-primary;
           -webkit-mask: url("../images/Vitpay.png") center / cover no-repeat;
           mask: url("../images/Vitpay.png") center / cover no-repeat;
         }
 
         &-3 {
-          background-color: $color-primary;
+          background-color: reset.$color-primary;
           -webkit-mask: url("../images/ThaThrowdown.png") center / cover
             no-repeat;
           mask: url("../images/ThaThrowdown.png") center / cover no-repeat;
@@ -178,7 +180,7 @@
       background-image: linear-gradient(
         to bottom,
         transparent 1%,
-        $color-bg 50%,
+        reset.$color-bg 50%,
         #111111c0
       );
       padding: 5rem 0 4rem 0;

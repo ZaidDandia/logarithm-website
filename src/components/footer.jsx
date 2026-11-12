@@ -1,6 +1,7 @@
+"use client";
+
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import ReactFullpage from "@fullpage/react-fullpage-umd";
 // import centro from "./images/Centro.png";
 // import throwdown from "./images/ThaThrowdown.png";
 // import vitpay from "./images/Vitpay.png";
@@ -38,7 +39,7 @@ function Footer() {
                 window.open("https://www.linkedin.com/company/logarithmtech/");
               }}
             >
-              <img src={LinkedIn} alt="Linkedin" />
+              <img src={LinkedIn.src} alt="Linkedin" />
             </div>
             <div
               className="footer__links--item"
@@ -46,7 +47,7 @@ function Footer() {
                 window.open("https://www.instagram.com/logarithm.tech/");
               }}
             >
-              <img alt="Instagram" src={Instagram} />
+              <img alt="Instagram" src={Instagram.src} />
             </div>
             <div
               className="footer__links--item"
@@ -54,7 +55,7 @@ function Footer() {
                 window.open("https://wa.me/447449068134");
               }}
             >
-              <img alt="Whatsapp" src={Whatsapp} />
+              <img alt="Whatsapp" src={Whatsapp.src} />
             </div>
           </div>
         </div>

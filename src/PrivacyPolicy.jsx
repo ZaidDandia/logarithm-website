@@ -1,6 +1,5 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import ReactFullpage from "@fullpage/react-fullpage-umd";
 // import centro from "./images/Centro.png";
 // import throwdown from "./images/ThaThrowdown.png";
 // import vitpay from "./images/Vitpay.png";

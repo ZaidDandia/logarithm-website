@@ -1,14 +1,16 @@
+@use "reset";
+
 .orange {
   width: 100%;
-  padding: $section-padding-2;
+  padding: reset.$section-padding-2;
   display: flex;
   justify-content: center;
-  background-color: $color-primary;
+  background-color: reset.$color-primary;
   // z-index: 100;
   position: relative;
   padding-bottom: 20rem;
 
-  @include respond(phone) {
+  @include reset.respond(phone) {
     overflow: hidden;
   }
 
@@ -21,7 +23,7 @@
     width: 100%;
     margin: 0 10rem;
 
-    @include respond(tab-port) {
+    @include reset.respond(tab-port) {
       flex-direction: column;
       margin: 0 5rem;
     }
@@ -34,11 +36,11 @@
     display: flex;
     margin-bottom: 5rem;
 
-    @include respond(tab-land) {
+    @include reset.respond(tab-land) {
       font-size: 4rem;
     }
 
-    @include respond(tab-port) {
+    @include reset.respond(tab-port) {
       font-size: 3rem;
     }
 
@@ -51,12 +53,12 @@
       width: 0;
       transform-origin: left;
 
-      @include respond(tab-land) {
+      @include reset.respond(tab-land) {
         border-width: 1rem;
         margin-bottom: 0.9rem;
       }
 
-      @include respond(tab-port) {
+      @include reset.respond(tab-port) {
         border-width: 0.8rem;
         margin-bottom: 0.7rem;
       }
@@ -83,7 +85,7 @@
     justify-content: space-between;
     gap: $gap-big;
 
-    @include respond(tab-land) {
+    @include reset.respond(tab-land) {
       gap: $gap-med;
     }
 
@@ -98,7 +100,7 @@
       justify-content: center;
       align-items: center;
 
-      @include respond(tab-land) {
+      @include reset.respond(tab-land) {
         flex-basis: calc(33% - #{$gap-med});
       }
 
@@ -106,7 +108,7 @@
         flex-basis: calc(50% - #{$gap-med});
       }
 
-      @include respond(phone) {
+      @include reset.respond(phone) {
         flex-basis: 100%;
       }
 
@@ -144,16 +146,16 @@
     position: absolute;
     width: 5rem;
     height: 120%;
-    background-color: $color-primary-fade2;
+    background-color: reset.$color-primary-fade2;
     transform: rotate(-25deg) translateX(-15rem) translateY(-10rem);
     z-index: 1;
     // margin-left: 2rem;
 
-    @include respond(tab-land) {
+    @include reset.respond(tab-land) {
       transform: rotate(-30deg) translateX(-17rem) translateY(-10rem);
     }
 
-    @include respond(phone) {
+    @include reset.respond(phone) {
       height: 112%;
     }
 

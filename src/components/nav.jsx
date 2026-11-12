@@ -1,16 +1,28 @@
-import React, { useRef } from "react";
+"use client";
+
+import React, { useEffect, useRef, useState } from "react";
 // import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import ParticleBackground from "./particles";
-// import ReactFullpage from "@fullpage/react-fullpage-umd";
-import logo from "../images/logo";
+import logo from "../images/logo.png";
 // import centro from "./images/Centro.png";
 // import throwdown from "./images/ThaThrowdown.png";
 // import vitpay from "./images/Vitpay.png";
+import useIsSmallScreen from "../hooks/useIsSmallScreen";
 import "../stylesheets/App.scss";
 
-function Nav({ isSmallScreen, isScrolled }) {
+function Nav() {
   const refSidebar = useRef();
   const navBtnRef = useRef();
+  const isSmallScreen = useIsSmallScreen();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleSidebar = () => {
     const sidebar = refSidebar.current;
@@ -37,7 +49,7 @@ function Nav({ isSmallScreen, isScrolled }) {
               <div className="bar"></div>
             </div>
             <div className="nav__small--logo">
-              <img src={logo} alt="logarithm technologies logo" />
+              <img src={logo.src} alt="logarithm technologies logo" />
             </div>
           </nav>
           <div
@@ -87,7 +99,7 @@ function Nav({ isSmallScreen, isScrolled }) {
                 <div className="nav__logo">
                   <a className="nav__link" href="/">
                     <img
-                      src={logo}
+                      src={logo.src}
                       className="nav__logo--img"
                       alt="logarithm logo"
                     />

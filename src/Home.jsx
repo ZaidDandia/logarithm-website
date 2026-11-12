@@ -1,8 +1,8 @@
+"use client";
+
 import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 // import { Carousel } from "react-responsive-carousel";
-// import ParticleBackground from "./components/particles";
-// import ReactFullpage from "@fullpage/react-fullpage-umd";
 // import logo from "./images/logo";
 // import centro from "./images/Centro.png";
 // import throwdown from "./images/ThaThrowdown.png";
@@ -18,9 +18,11 @@ import LearnersDen from "./images/Learners Den Logo White.png";
 import Learnify from "./images/Learnify White.png";
 import VI from "./images/VI White.png";
 import IDEA from "./images/IDE.A White.png";
+import useIsSmallScreen from "./hooks/useIsSmallScreen";
 import "./stylesheets/App.scss";
 
-const Home = ({ isSmallScreen }) => {
+const Home = () => {
+  const isSmallScreen = useIsSmallScreen();
   // Carousel function
   const [activeStep, setActiveStep] = useState(0);
   const [activeHeight, setActiveHeight] = useState("auto");
@@ -249,7 +251,7 @@ const Home = ({ isSmallScreen }) => {
             </button>
           </div>
           <div className="white__img">
-            <img alt="design element" src={Man} />
+            <img alt="design element" src={Man.src} />
           </div>
           <div className="white__clip--shadow">
             <div className="white__clip"></div>
@@ -309,7 +311,7 @@ const Home = ({ isSmallScreen }) => {
                   vectorEffect="non-scaling-stroke"
                 />
               </svg> */}
-              <img src={Centro} alt="img" />
+              <img src={Centro.src} alt="img" />
               {/* Client 1 */}
             </div>
             <div className="orange__clients__item">
@@ -319,7 +321,7 @@ const Home = ({ isSmallScreen }) => {
                   vectorEffect="non-scaling-stroke"
                 />
               </svg> */}
-              <img src={ThaThrowdown} alt="img" />
+              <img src={ThaThrowdown.src} alt="img" />
               {/* Client 2 */}
             </div>
             <div className="orange__clients__item">
@@ -329,7 +331,7 @@ const Home = ({ isSmallScreen }) => {
                   vectorEffect="non-scaling-stroke"
                 />
               </svg> */}
-              <img src={Vitpay} alt="img" />
+              <img src={Vitpay.src} alt="img" />
               {/* Client 3 */}
             </div>
             <div className="orange__clients__item">
@@ -339,7 +341,7 @@ const Home = ({ isSmallScreen }) => {
                   vectorEffect="non-scaling-stroke"
                 />
               </svg> */}
-              <img src={Trema} alt="img" />
+              <img src={Trema.src} alt="img" />
               {/* Client 4 */}
             </div>
             <div className="orange__clients__item">
@@ -349,7 +351,7 @@ const Home = ({ isSmallScreen }) => {
                   vectorEffect="non-scaling-stroke"
                 />
               </svg> */}
-              <img src={LearnersDen} alt="img" />
+              <img src={LearnersDen.src} alt="img" />
               {/* Client 5 */}
             </div>
             <div className="orange__clients__item">
@@ -359,7 +361,7 @@ const Home = ({ isSmallScreen }) => {
                   vectorEffect="non-scaling-stroke"
                 />
               </svg> */}
-              <img src={nattyNYC} alt="img" />
+              <img src={nattyNYC.src} alt="img" />
               {/* Client 6 */}
             </div>
             <div className="orange__clients__item">
@@ -369,7 +371,7 @@ const Home = ({ isSmallScreen }) => {
                   vectorEffect="non-scaling-stroke"
                 />
               </svg> */}
-              <img src={Learnify} alt="img" />
+              <img src={Learnify.src} alt="img" />
               {/* Client 6 */}
             </div>
             <div className="orange__clients__item">
@@ -379,7 +381,7 @@ const Home = ({ isSmallScreen }) => {
                   vectorEffect="non-scaling-stroke"
                 />
               </svg> */}
-              <img src={VI} alt="img" />
+              <img src={VI.src} alt="img" />
               {/* Client 6 */}
             </div>
             <div className="orange__clients__item">
@@ -389,7 +391,7 @@ const Home = ({ isSmallScreen }) => {
                   vectorEffect="non-scaling-stroke"
                 />
               </svg> */}
-              <img src={IDEA} alt="img" />
+              <img src={IDEA.src} alt="img" />
               {/* Client 6 */}
             </div>
           </div>
